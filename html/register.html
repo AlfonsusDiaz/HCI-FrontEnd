@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/register.css">
+
+</head>
+<body>
+    
+    <!-- BAR -->
+    <nav>
+        <div class="logo">
+          <img src="../logo_pic(rev15).png" width="130px" alt="">
+        </div>
+    
+        <form class="form-box">
+          <input type="text" class="search" placeholder="Search Song, Artist, Album, Playlist">
+        </form>
+    
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="../html/register.html">Register</a></li>
+          <li><a href="../html/premium.html">Premium</a></li>
+          <li><a href="../html/topchart.html">Top.10.AsianMusic</a></li>
+          <li><a href="../html/genre.html">MusicByGenre</a></li>
+        </ul>
+    
+        <div class="menu-toggle">
+          <input type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    
+      </nav>
+      <!-- javascript utk bar -->
+      <script src="../javascript/homebar.js"></script>
+
+
+       <!-- CONTENT -->
+
+       <div class="judul">
+        <h1>Register</h1>
+      </div>
+       
+		  <form class="form">
+      <input type="text" id="fullname" name="fullname"  placeholder="Name...">
+      <input type="email" id="e-mail" name="e-mail"  placeholder="Email...">
+      <input type="password" id="password" name="password"  placeholder="Password...">
+      <input type="password" id="cpassword" name="password" placeholder="Confirm Password...">
+
+            <!-- gender -->
+            <br>
+            Gender
+			<select class="gender" action="" id="gender">
+				<option>Male</option>
+				<option>Female</option>
+            </select>
+           <br>
+
+            <!-- payment -->
+    
+            Payment Method
+            <select class="payment" name="" id="">
+                <option value="">Credit Cards</option>
+                <option value="">Mobile Payments</option>
+                <option value="">Bank Transfers</option>
+                <option value="">Ewallets</option>
+                <option value="">Prepaid Cards</option>
+                <option value="">Direct Deposit</option>
+                <option value="">Cash</option>
+            </select>
+            <br>
+
+            <!-- terms -->
+            
+			<div class="label">
+				<input type="checkbox" id="tc" name="tc" value="">
+				<label id="hm" for="hm">I agree to terms and conditions</label>
+            </div>
+            
+          
+            <input class="lol" type="button" value="Register" id="register">
+            <h3 id="error"></h3>
+            <h3 id="success"></h3>
+        </form>
+      
+        
+
+
+<!-- FOOTER -->
+       <div class="footers">
+        <div class="footer">
+          <h2>&copy; 2020 RX-Player</h2>
+          <div class="socmed">
+            <a href="http://www.instagram.com"><img src="../instagram.png" width="60"></a>
+            <a href="http://www.twitter.com"><img src="../twitter.png" width="60"></a>
+            <a href="http://www.facebook.com"><img src="../facebook.png" width="60"></a>
+          </div>
+        </div>
+      </div>
+</body>
+<script src="../javascript/script.js"></script>
+
+</html>

@@ -1,0 +1,227 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    /* padding-bottom: 1000px; */
+    font-size: 18px;
+    overflow-x: hidden;
+    background-color: rgb(255 192 203);
+}
+
+/* BAR */
+nav{
+	display: flex;
+	background-color: aquamarine;
+	justify-content: space-around;
+	color: violet;
+	height: 60px;
+	align-items: center;
+}
+nav ul{
+	display: flex;
+	list-style: none;
+	width: 40%;
+  justify-content: space-around;
+}
+nav ul li a{
+  color: black;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.search{
+  width: 400px;
+  height: 30px;
+}
+
+nav ul li a:hover{
+	color: red;
+}
+
+/* HTML BURGER */
+.menu-toggle{
+	display: none;
+	flex-direction: column;
+	height: 20px;
+	justify-content: space-between;
+	position: relative;
+	z-index: 999;
+}
+
+.menu-toggle input{
+	position: absolute;
+	width: 40px;
+	height: 28px;
+	left: -6px;
+	top: -3px; 
+	opacity: 0;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.menu-toggle span{
+	display: block;
+	width: 28px;
+	height: 3px;
+	background-color: white;
+	border-radius: 3px;
+	transition: all 0.5s;
+}
+
+/* HAMBURGER ANIMATION */
+.menu-toggle span:nth-child(2){
+	transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+	transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+	transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4){
+	transform: rotate(-45deg) translate(-1px, 0);;
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+  opacity: 0;
+	transform: scale(0);
+} 
+
+/* JUDUL */
+.premium{
+    text-align: center;
+    /* padding-top: 10px; */
+    margin-top: 50px;
+}
+
+/* CONTENT */
+.container4{
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+    max-width: 100%;
+    height: auto;
+}
+.card{
+    border: 1px solid #999;
+    border-radius: 10px;
+    background-color: aquamarine;
+    overflow: hidden;
+    margin: 10px;
+    flex: 1;
+}
+
+.card .header{
+    height: 150px;
+    background-color: wheat;
+    text-align: center;
+    padding: 10px;
+}
+.card .content{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.subscribe{
+    cursor: pointer;
+}
+
+/* FOOTER */
+/* FOOTER */
+.footers{
+	background-color: aquamarine;
+	/* padding-top: 10px; */
+    /* margin-top: 10px; */
+    margin-top: 58px;
+    padding-bottom: -10px;
+    max-width: 100%;
+    height: auto;
+  }
+  .footer{
+	margin-left: 30px;
+    padding: 15px;
+  }
+  .footer h2{
+	color: black;
+    display: inline-block;
+    margin-left: -40px;
+  }
+
+  .socmed{
+	margin-top: -13px;
+	float: right;
+	display: inline-block;
+  }
+  .socmed a{
+	margin: 5px;
+  }
+
+  /* RESPONSIVE */
+  /* Tablet */
+  @media screen and (max-width: 768px){
+  
+    .menu-toggle{
+      display: flex;
+    }
+      nav ul{
+          position: absolute;
+          right: 0;
+             flex-direction: column;
+      /* background-color: black; */
+          top: 0;
+          height: 100vh;
+          align-items: center;
+          justify-content: space-evenly;
+          z-index: 1;
+          width: 100%;
+          background-color: aquamarine;
+          transform: translateY(-100%);
+          transition: all 1s;
+          opacity: 0;
+      }
+      nav ul.slide{
+          transform: translateY(0);
+          opacity: 1;
+      }
+      .card .header{
+        font-size: 2.6vw;
+      }
+      .card .content{
+          font-size: 2.9vw;
+      }
+  }
+
+  /* MOBILE */
+  @media screen and (max-width: 576px){
+  
+    .menu-toggle{
+      display: flex;
+    }
+      nav ul{
+          position: absolute;
+          right: 0;
+             flex-direction: column;
+      /* background-color: black; */
+          top: 0;
+          height: 100vh;
+          align-items: center;
+          justify-content: space-evenly;
+          z-index: 1;
+          width: 100%;
+          background-color: aquamarine;
+          transform: translateY(-100%);
+          transition: all 1s;
+          opacity: 0;
+      }
+      nav ul.slide{
+          transform: translateY(0);
+          opacity: 1;
+      }
+      .card .header{
+          font-size: 2.5vw;
+      }
+      .card .content{
+          font-size: 2.8vw;
+      }
+  }
